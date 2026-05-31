@@ -3,7 +3,7 @@
 Marketing / project landing page for **Typro**, an offline, keyboard-only
 typewriter app for the Raspberry Pi.
 
-🔗 **Live site:** https://dahosi.github.io/typro-landing/
+🔗 **Live site:** https://dahosi.github.io/typro-app/
 📦 **App source:** https://github.com/dahosi/typro
 
 ## About
@@ -22,7 +22,7 @@ Highlights:
 ## Structure
 
 ```
-typro-landing/
+typro-app/
 ├── index.html              # page markup
 ├── assets/
 │   ├── css/styles.css      # design tokens + components
