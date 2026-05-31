@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typro — An Offline Raspberry Pi Typewriter</title>
+  <meta
+    name="description"
+    content="Typro is a distraction-free, keyboard-only typewriter app for the
+             Raspberry Pi. Built in a single Python file with Tkinter — offline,
+             cross-platform, dependency-free."
+  />
+  <meta name="theme-color" content="#4a2f24" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Typro — An Offline Raspberry Pi Typewriter" />
+  <meta
+    property="og:description"
+    content="A distraction-free, keyboard-only writing appliance built in a
+             single, dependency-free Python file."
+  />
+  <meta property="og:image" content="assets/img/icon-128.png" />
+
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/icon-48.png" />
+  <link rel="apple-touch-icon" href="assets/img/icon-128.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== Header / Nav ===================== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="nav__brand" href="#top">
+        <img src="assets/img/icon-128.png" alt="" width="32" height="32" />
+        <span>Typro</span>
+      </a>
+
+      <button
+        class="nav__toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Open navigation menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#tech">Tech</a></li>
+        <li><a href="#shortcuts">Shortcuts</a></li>
+        <li>
+          <a class="btn btn--ghost" href="https://github.com/dahosi/typro"
+             target="_blank" rel="noopener">View source</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===================== Hero ===================== -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Offline · Keyboard-only · Single file</p>
+          <h1 class="hero__title">
+            A digital typewriter for focused writing.
+          </h1>
+          <p class="hero__lead">
+            Typro turns a Raspberry Pi (or any computer) into a distraction-free
+            writing appliance — vintage paper, red dates, and real-size pages —
+            built in one dependency-free Python file with Tkinter.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://github.com/dahosi/typro"
+               target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn--ghost" href="#how">See how it works</a>
+          </div>
+          <ul class="hero__badges" aria-label="Key facts">
+            <li>Python&nbsp;3 · Tkinter</li>
+            <li>No dependencies</li>
+            <li>macOS · Windows · Linux · Pi</li>
+          </ul>
+        </div>
+
+        <!-- App preview: a CSS mock of the editor, on-brand -->
+        <div class="hero__preview" aria-hidden="true">
+          <div class="desk">
+            <div class="sheet">
+              <p class="sheet__date">31 MAY 2026</p>
+              <p>Dear reader,</p>
+              <p>
+                The page you are typing on is sized to real A4, so what you see
+                is what prints. When it fills, the next page appears on its own.
+              </p>
+              <p class="sheet__cursor">Yours, in monospace<span>|</span></p>
+            </div>
+            <span class="desk__hint">Page 1 of 2 · A4 · Sound: on</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Features ===================== -->
+    <section class="section" id="features">
+      <div class="container">
+        <header class="section__head">
+          <h2>Built like an appliance</h2>
+          <p>Every detail serves one goal: get out of the way and let you write.</p>
+        </header>
+
+        <ul class="cards">
+          <li class="card">
+            <h3>Real-size pages</h3>
+            <p>
+              The sheet is drawn at true A4 or 3×4-inch proportions on a textured
+              desk, so the screen previews the printout exactly.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Automatic page flow</h3>
+            <p>
+              Fill a page and the next one appears; delete text and it flows
+              back. On-screen breaks match the exported PDF.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Two-colour ribbon</h3>
+            <p>
+              Black ink for text, brand red for dates in <code>DD MON YYYY</code>
+              — a nod to the old two-colour typewriter ribbon.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Export &amp; print</h3>
+            <p>
+              Export to PDF (cream or white paper) or plain text, generated in
+              pure Python with no third-party libraries.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Keyboard-only</h3>
+            <p>
+              No mouse required. Native shortcuts: <kbd>⌘</kbd> on macOS,
+              <kbd>Ctrl</kbd> on Windows, Linux and the Pi.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Truly offline</h3>
+            <p>
+              No network, no accounts, no telemetry. Files are saved locally as
+              open, human-readable JSON.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== How it works ===================== -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <header class="section__head">
+          <h2>How it works</h2>
+          <p>A focused workflow, from first keystroke to a shareable PDF.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Open and type</h3>
+            <p>Launch full-screen and start writing on the vintage page.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>Pages flow</h3>
+            <p>Text continues onto new pages automatically as you fill each sheet.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>Save locally</h3>
+            <p>Store notebooks as <code>.typro</code> files on internal or SD storage.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">4</span>
+            <h3>Export to PDF</h3>
+            <p>Produce a print-ready PDF in your chosen paper size and colour.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== Tech ===================== -->
+    <section class="section" id="tech">
+      <div class="container tech__grid">
+        <div>
+          <h2>Engineering notes</h2>
+          <p class="tech__lead">
+            A deliberate exercise in shipping a complete, robust desktop app
+            with zero third-party dependencies.
+          </p>
+          <ul class="tech__list">
+            <li><strong>Single-file architecture</strong> — one readable Python module.</li>
+            <li><strong>Standard library only</strong> — Tkinter for the UI; no installs.</li>
+            <li><strong>Cross-platform</strong> — one codebase for macOS, Windows, Linux and Raspberry Pi OS, with a startup guard for the deprecated macOS Tk 8.5.</li>
+            <li><strong>Custom PDF writer</strong> — paginated PDFs built by hand, matching the on-screen layout.</li>
+            <li><strong>Security-minded I/O</strong> — opened files are sanitised; no <code>eval</code>, no shell, no network.</li>
+          </ul>
+        </div>
+
+        <aside class="stack" aria-label="Technology stack">
+          <h3>Stack</h3>
+          <ul>
+            <li>Python 3</li>
+            <li>Tkinter (Tk 8.6+)</li>
+            <li>JSON document format</li>
+            <li>Hand-rolled PDF generation</li>
+            <li>WAV synthesis (standard library)</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== Shortcuts ===================== -->
+    <section class="section section--alt" id="shortcuts">
+      <div class="container">
+        <header class="section__head">
+          <h2>Keyboard shortcuts</h2>
+          <p>The modifier is <kbd>Ctrl</kbd> on Windows / Linux / Pi and <kbd>⌘</kbd> on macOS.</p>
+        </header>
+
+        <div class="table-wrap">
+          <table class="shortcuts">
+            <caption class="sr-only">Typro keyboard shortcuts</caption>
+            <thead>
+              <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><kbd>Mod</kbd> + <kbd>N</kbd></td><td>New page (page break)</td></tr>
+              <tr><td><kbd>Mod</kbd> + <kbd>S</kbd></td><td>Save notebook</td></tr>
+              <tr><td><kbd>Mod</kbd> + <kbd>O</kbd></td><td>Open a notebook</td></tr>
+              <tr><td><kbd>Mod</kbd> + <kbd>P</kbd></td><td>Export / save as PDF</td></tr>
+              <tr><td><kbd>Mod</kbd> + <kbd>D</kbd></td><td>Insert today's date (red)</td></tr>
+              <tr><td><kbd>Mod</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td><td>Previous / next page</td></tr>
+              <tr><td><kbd>Mod</kbd> + <kbd>/</kbd></td><td>Help</td></tr>
+              <tr><td><kbd>F11</kbd></td><td>Full screen on / off</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta">
+      <div class="container cta__inner">
+        <h2>Read the code</h2>
+        <p>The full project, documentation and build are open source on GitHub.</p>
+        <a class="btn btn--primary" href="https://github.com/dahosi/typro"
+           target="_blank" rel="noopener">Explore the repository</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>Typro — an offline Raspberry Pi typewriter.</p>
+      <p>
+        <a href="https://github.com/dahosi/typro" target="_blank" rel="noopener">GitHub</a>
+        · MIT Licensed · <span id="year"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
